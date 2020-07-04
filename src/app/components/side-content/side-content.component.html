@@ -1,0 +1,72 @@
+<div class="styled-card" *ngIf="recentLogAvailable" style="background-color: #343a40;">
+    <div style="padding: 5px 0 0 0;">
+        <h4>Recent Logs</h4>
+        <div>{{ recentLog.text }}</div>
+    </div>
+</div>
+
+<div class="styled-card" style="background-color: #398b44">
+    <div style="padding: 5px 0 0 0;">
+        <h4>Add item</h4>
+        <form (ngSubmit)="addItem()">
+            <div class="add-item-inputs">
+                <input type="text" 
+                        placeholder="Item Name..." 
+                        [(ngModel)]="itemName" 
+                        name="itemName"
+                        style="width: 100%;">
+                <div class="row">
+                    <div class="col-4">
+                        <input type="text" placeholder="Price" 
+                                [(ngModel)]="itemPrice" 
+                                name="itemPrice"
+                                style="width: 100%;">
+                    </div>
+                    <div class="col-4">
+                        <input type="text" placeholder="Amount" 
+                                [(ngModel)]="itemAmount" 
+                                name="itemAmount"
+                                style="width: 100%;">
+                    </div>
+                    <div class="col-4">
+                        <input type="text" placeholder="Units" 
+                                [(ngModel)]="itemUnit" 
+                                name="itemUnit"
+                                style="width: 100%;">
+                    </div>
+                </div>
+                <div style="display: inline-block; width: 100%;">
+                    <button type="submit" class="add-btn">Add</button>
+                </div>
+                
+            </div>
+        </form> 
+    </div>
+</div>
+
+<!-- <div class="styled-card" style="background-color: #8b394b; text-align: center;">
+    <h4>Rs. {{ expenses.totalExpense }}</h4>
+    <div>Total Monthly Expense </div>
+</div> -->
+
+<!-- <div class="styled-card" *ngFor="let item of items.reverse()" style="background-color: #343a40;">
+    <div class="row">
+        <div class="col-6" style="border-right: 2px solid white; margin: auto 0;">
+            <h4>{{ item.itemName }}</h4>
+        </div>
+        <div class="col-6">
+            <div> 
+                <div style="float: left;">Price:</div>
+                <div style="float: right;">Rs. {{ item.price }}</div>
+            </div>
+            <div> 
+                <div style="float: left;">Amount:</div>
+                <div style="float: right;">{{ item.amount }} {{ item.units }}</div>
+            </div>
+        </div>
+    </div>
+</div> -->
+
+<div class="styled-card" style="height: 300px; background-color: #ffffff; color: #343a40;">
+    <h4>Calendar</h4>
+</div>

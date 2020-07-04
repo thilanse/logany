@@ -1,0 +1,27 @@
+<div>
+    <div *ngFor="let shoppingList of shoppingLists.reverse()">
+        <div class="styled-card" style="margin: auto; margin-bottom: 20px;">
+            <h4>{{ shoppingList.date | date }}</h4>
+            <div class="row" *ngFor="let item of shoppingList.items">
+                <div class="col-4">
+                    <div>{{ item.itemName }}</div>
+                </div>
+                <div class="col-4">
+                    <div style="float: right;">{{ item.amount }} {{ item.units }}</div>
+                </div>
+                <div class="col-4">
+                    <div style="float: right;">Rs. {{ item.price }}</div>
+                </div>
+            </div>
+            <div class="row" style="margin-top: 10px;">
+                <div class="col-4">
+                    <h5>Total</h5>
+                </div>
+                <div class="col-4"></div>
+                <div class="col-4">
+                    <h5  style="float: right;">Rs. {{ shoppingList.totalPrice }}</h5>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

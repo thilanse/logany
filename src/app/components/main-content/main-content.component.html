@@ -1,0 +1,37 @@
+<div class="main-container">
+    <div class="insert-log-block">
+        <h3>New Log</h3>
+        <form (ngSubmit)="onSubmit()">
+            <div class="new-log-container">
+                <textarea autosize id="new-log" style="width: 100%;" placeholder="Type your new log here..."
+                    [(ngModel)]="text" name="text"></textarea>
+            </div>
+            <div style="display: inline-block; width: 100%;">
+                <button type="submit" class="post-btn">Post</button>
+            </div>
+        </form>   
+    </div>
+
+    <div class="log-container">
+        <div style="background-color: rgb(255, 255, 255); padding: 10px 20px; margin-bottom: 5px;" *ngFor = "let log of logs.reverse()">
+            <div class="row" style="margin-bottom: 5px;">
+                <div class="col-8">
+                    <div style="font-weight: bold; font-size: 20px;">{{ log.createdDate | date }} | {{ log.id }}</div>
+                </div>
+                <div class="col-4">
+                    <button class="del-btn" (click)="deleteLog(log)">
+                        <span class="material-icons" style="font-size: 20px;">delete</span>
+                    </button>
+                    <button class="edit-btn" (click)="editLog(log)">
+                        <span class="material-icons" style="font-size: 20px;">edit</span>
+                    </button>
+                </div>
+            </div>
+            <div style="font-size: 16px;">
+                {{ log.text }}
+            </div>
+        </div>
+    </div>
+
+    
+</div>

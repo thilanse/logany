@@ -1,0 +1,28 @@
+.styled-card{
+    background-color: #343a40;
+    color: white;
+    padding: 10px 20px; 
+    margin-bottom: 5px;
+}
+
+.add-item-inputs input{
+    border: none;
+    outline: none;
+    margin-bottom: 10px;
+    padding: 5px;
+}
+
+.add-btn{
+    background-color: #60af6b;
+    color: white;
+    float: right;
+    border: none;
+    outline: none;
+    padding: 2px 10px;
+    border-radius: 5px;
+    font-size: 18px;
+}
+
+.add-btn:hover{
+    cursor: pointer;
+}
